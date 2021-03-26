@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56930/EmployeeInfo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EmployeeInfoService" />
+  <xs:element name="getEmployees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmployeeInfoService" minOccurs="0" name="getEmployeesResult" nillable="true" type="q1:ArrayOfEmployeeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeesbyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeesbyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EmployeeInfoService" minOccurs="0" name="getEmployeesbyIDResult" nillable="true" type="q2:EmployeeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
